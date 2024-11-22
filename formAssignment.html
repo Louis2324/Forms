@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Form</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Student Application Form</h1>
+    <div class="form-container">
+        <form action="formAssignment.php" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend><h3>Student Information</h3></legend>
+             <label for="st-name"> Enter your full name:
+                <input type="text" id="st-name" name="st-name" required>
+             </label>
+             <label for="st-email"> Enter your email address:
+                <input type="email" id="st-email" name="st-email" required>
+             </label>
+             <label for="NE-code">Enter your National Examination Registration Code:
+               <input type="text" id="NE-code" name="NE-code" minlength="15" title="provide a valid code format" pattern="\d{6}OLC\d{6}"required>
+             </label>
+             <label> Select your gender:
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+             </label>
+             <label for="dob"> Enter your date of birth:
+                <input type="date" id="dob" name="dob" required>
+             </label>
+             <label for="por"> Select your place of residence:
+                <select required name="por">
+                    <option value="Northern">Northern Province</option>
+                    <option value="Southern">Southern Province</option>
+                    <option value="Eastern">Eastern Province</option>
+                    <option value="Western">Western Province</option>
+                    <option value="Kigali-City">Kigali City</option>
+                </select>
+          </fieldset>
+
+          <fieldset>
+            <legend> <h3>Guardian Contact Information</h3></legend>
+             <label for="p-name">Guardian's name:<input type="text" id="p-name" name="p-name" required></label>
+             <label for="p-nbr">Guardian's phone number: <input type="number" id="p-nbr" name="p-nbr" min="10" required></label>
+             <label for="p-email">Guardian's email: <input type="email" id="p-email" name="p-email" required></label>
+          </fieldset>
+
+          <fieldset>
+            <legend><h3>Academic Background</h3></legend>
+            <label for="school">Enter the name of your previous school:
+                <input type="text"  id="school" required name="school">
+            </label>
+            <label for="report-card">Upload your report cards here:
+                <input type="file" name="report-card" id="report-card" required>
+            </label>
+            <label for="bio"> Provide a short biography of yourself:
+                <textarea  id="bio" required></textarea>
+            </label>
+           </fieldset>
+           <fieldset>
+            <legend>Select your desired combination</legend>
+               <label for="course-pcm">
+                <input type="radio" id="course-pcm" name="course" value="PCM" required>PCM
+               </label>
+               <label for="course-pcb">
+                <input type="radio" id="course-pcb" name="course" value="PCB" required>PCB
+               </label>
+               <label for="course-mcb">
+                <input type="radio" id="course-mcb" name="course" value="MCB" required>MCB
+               </label>
+               <label for="course-mpc">
+                <input type="radio" id="course-mpc" name="course" value="MPC" required>MPC
+               </label>
+               <label for="course-mpg">
+                <input type="radio" id="course-mpg" name="course" value="MPG" required>MPG
+               </label>
+           </fieldset>
+           <fieldset>
+            <legend>Consent for Information Usage</legend>
+            <label><input type="checkbox" required> I consent to the use of my provided information.</label>
+           </fieldset>
+           <button type="submit" value="submit"> Submit Form</button>
+        </form>
+    </div>
+</body>
+</html>
+
